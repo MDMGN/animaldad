@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Pacientes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Paciente">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Nombre">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="20" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="Propietario">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="20" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="Email">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="30" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="Alta">
+								<xs:simpleType>
+									<xs:restriction base="xs:date" />
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="Sintomas">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="250" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
