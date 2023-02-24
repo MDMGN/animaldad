@@ -38,6 +38,13 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
+        <div class="container">
+            <p style="text-align:center;font-weight:bold;font-family:'Times New Roman', Times, serif;font-size:25px;">
+                Está aplicación web es un control de citas para las veterinaria
+                "animalDad" donde creamos una nueva cita, editamos, eliminamos y leemos las nuevas citas en la base de datos.
+                Donde podemos getsionar los paciente desde una base de datos.
+            </p>
+        </div>
 
         <div class="navbar navbar-fixed-top">
             <div class="container">
