@@ -22,6 +22,7 @@ namespace animaldad
         {
             try
             {
+                string idAnimal = inputTextIdAnimal.Text;
                 string mascota = inputTextMascota.Text;
                 string email = inputTextEmail.Text;
                 string propietario = inputTextPropietario.Text;
@@ -30,28 +31,32 @@ namespace animaldad
 
                 XmlNode xpaciente = this.xml.CreateElement("Paciente");
 
-                XmlNode xmascota = createElementPacient("mascota", mascota);
+                XmlNode xidMascota = createElementPacient("idMascota", idAnimal);
+                xpaciente.AppendChild(xidMascota);
+
+                XmlNode xmascota = createElementPacient("Nombre", mascota);
                 xpaciente.AppendChild(xmascota);
 
-                XmlNode xemail = createElementPacient("email", email);
-                xpaciente.AppendChild(xemail);
 
-                XmlNode xpropietario = createElementPacient("propietario", propietario);
+                XmlNode xpropietario = createElementPacient("Propietario", propietario);
                 xpaciente.AppendChild(xpropietario);
 
-                XmlNode xalta = createElementPacient("alta", alta);
+                XmlNode xemail = createElementPacient("Email", email);
+                xpaciente.AppendChild(xemail);
+
+                XmlNode xalta = createElementPacient("Alta", alta);
                 xpaciente.AppendChild(xalta);
 
-                XmlNode xsintomas = createElementPacient("sintomas", sintomas);
+                XmlNode xsintomas = createElementPacient("Sintomas", sintomas);
                 xpaciente.AppendChild(xsintomas);
 
-                string sql = $"INSERT INTO [LM].[pacientes] ([Nombre],[Email],[Propietario],[Alta],[Sintomas],[xml]) VALUES ('{mascota}','{email}','{propietario}','{alta}','{sintomas}','{xpaciente.OuterXml}')";
+                string sql = $"INSERT INTO [LM].[pacientes] ([idMascota],[Nombre],[Email],[Propietario],[Alta],[Sintomas],[xml]) VALUES ({idAnimal},'{mascota}','{email}','{propietario}','{alta}','{sintomas}','{xpaciente.OuterXml}')";
                 SqlConnection conn = new SqlConnection("Data Source = 'PRIMERO100\\PRIMERO';Initial Catalog=DAM1_DarrenVargas;Integrated Security=SSPI");
                 SqlCommand comand = new SqlCommand(sql, conn);
                 conn.Open();
                 comand.ExecuteNonQuery();
                 conn.Close();
-                AlertLiteral.Text = $"<div class='alert alert-success' style='margin-top:10px;'><p>Datos enviados exitosamente!</p></ div > ";
+                AlertLiteral.Text = $"<div class='bg-green-500 p-3 text-center text-white rounded-md my-5 font-bold opacity-99'><p>Datos enviados exitosamente!</p></ div > ";
                 inputTextMascota.Text = null;
                 inputTextAlta.Text = null;
                 inputTextEmail.Text = null;
@@ -61,7 +66,7 @@ namespace animaldad
             catch(Exception error)
             {
                 Console.WriteLine(error);
-                AlertLiteral.Text = $"<div class='alert alert-danger'><p>Error al enviar tus datos</p></ div > ";
+                AlertLiteral.Text = $"<div class='bg-red-500 p-3 text-center text-white rounded-md my-5 font-bold opacity-99'><p>Error al enviar tus datos</p></ div > ";
             }
 
 

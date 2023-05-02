@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Pacientes>
-	<Paciente>
-		<Nombre></Nombre>
-		<Propietario></Propietario>
-		<Email></Email>
-		<Alta></Alta>
-		<Sintomas></Sintomas>
-	</Paciente>
-</Pacientes>
+<Paciente>
+	<idPaciente></idPaciente>
+	<Nombre></Nombre>
+	<Propietario></Propietario>
+	<Email></Email>
+	<Alta></Alta>
+	<Sintomas></Sintomas>
+</Paciente>
