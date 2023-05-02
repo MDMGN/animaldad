@@ -1,6 +1,13 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="animaldad._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <h2 class="font-black text-center text-3xl ">
+                    Seguimiento Pacientes
+    </h2>
+    <p class="text-lg mt-5 text-center">
+        Añade pacientes&nbsp;
+        <span class="text-indigo-600 font-bold">Administralos</span>
+    </p>
      <div class="md:w-1/2 lg:w-3/5 mx-5 m-auto">
          <div class="mb-5">
             <label for="inputMascosta" class="block uppercase text-gray-700 font-bold">IdAnimal</label>
