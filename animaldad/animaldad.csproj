@@ -112,6 +112,7 @@
     <Content Include="InsertarNoticia.aspx" />
     <Content Include="Global.asax" />
     <Content Include="mascotas_xml.aspx" />
+    <Content Include="MostrarNoticia.aspx" />
     <Content Include="paciente.xml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -195,6 +196,13 @@
     </Compile>
     <Compile Include="mascotas_xml.aspx.designer.cs">
       <DependentUpon>mascotas_xml.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarNoticia.aspx.cs">
+      <DependentUpon>MostrarNoticia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MostrarNoticia.aspx.designer.cs">
+      <DependentUpon>MostrarNoticia.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
